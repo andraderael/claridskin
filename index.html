@@ -2,6 +2,9 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta property="og:image" content="https://claridskin.netlify.app/.netlify/og-image/496b706004c9c294f027a906eb752c67.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Conheça o Clarid Skin Clareador Dérmico Corporal. Creme de uso tópico para cuidado diário da pele.">
 <title>Clarid Skin — Clareador Dérmico Corporal</title>
@@ -1011,50 +1014,30 @@ footer p{max-width:900px;margin:auto}
   </a>
 </div>
 
-<!-- RASTREAMENTO + SAÍDA NA MESMA ABA -->
+<!-- RASTREAMENTO (link nativo: não segura o clique, ajuda a abrir o app do Mercado Livre) -->
 <script>
 (function(){
-  var animado = false;
-
-  // Dispara os eventos e só depois leva a pessoa ao Mercado Livre (mesma aba).
-  // Se o Google não responder, sai após 400 ms para nunca travar o clique.
-  function sair(url){
-    var saiu = false;
-    function ir(){
-      if (saiu) return;
-      saiu = true;
-      window.location.href = url;
-    }
-
-    try {
-      if (typeof fbq === 'function') {
-        fbq('track', 'InitiateCheckout', {
-          content_name: 'Clarid Skin Clareador Dérmico Corporal',
-          currency: 'BRL'
-        });
-      }
-    } catch (e) {}
-
-    try {
-      if (typeof gtag === 'function') {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-300121029/otdECKDXl5EdEMX3jY8B',
-          'value': 1.0,
-          'currency': 'BRL',
-          'event_callback': ir
-        });
-      }
-    } catch (e) {}
-
-    setTimeout(ir, 400);
-  }
-
   document.querySelectorAll('a[href*="meli.la"], a.cta').forEach(function(el){
-    el.addEventListener('click', function(ev){
-      // Ctrl/Cmd+clique e clique do meio seguem o comportamento normal do navegador
-      if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button === 1) return;
-      ev.preventDefault();
-      sair(el.href);
+    el.addEventListener('click', function(){
+      try {
+        if (typeof fbq === 'function') {
+          fbq('track', 'InitiateCheckout', {
+            content_name: 'Clarid Skin Clareador Dérmico Corporal',
+            currency: 'BRL'
+          });
+        }
+      } catch (e) {}
+
+      try {
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-300121029/otdECKDXl5EdEMX3jY8B',
+            'value': 1.0,
+            'currency': 'BRL',
+            'transport_type': 'beacon'
+          });
+        }
+      } catch (e) {}
     });
   });
 })();
@@ -1101,5 +1084,7 @@ footer p{max-width:900px;margin:auto}
 })();
 </script>
 
+<script async src="/.netlify/scripts/ar" data-netlify-deploy-id="6ac7f62d766727f11c5197af" data-netlify-site-id="a101e97f-3632-48d8-a89e-23db548e1fec" data-agent-runner-id="6ac7f5bb5492d79628a2a21a"></script>
 </body>
 </html>
+<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="a101e97f-3632-48d8-a89e-23db548e1fec" data-app-host="app.netlify.com"></script>
