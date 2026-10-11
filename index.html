@@ -6,6 +6,10 @@
 <meta name="description" content="Conheça o Clarid Skin Clareador Dérmico Corporal. Creme de uso tópico para cuidado diário da pele.">
 <title>Clarid Skin — Clareador Dérmico Corporal</title>
 
+<!-- Conexão antecipada com o servidor da imagem do produto -->
+<link rel="preconnect" href="https://clarid.com.br" crossorigin>
+<link rel="preload" as="image" href="https://clarid.com.br/wp-content/uploads/2025/10/banneerfire.png" fetchpriority="high">
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -272,7 +276,6 @@ section{padding:75px 0}
   border:1px solid var(--card-border);
   border-radius:18px;
   padding:28px;
-  backdrop-filter:blur(8px);
 }
 .feature-icon{
   width:48px;height:48px;
@@ -525,11 +528,13 @@ footer p{max-width:900px;margin:auto}
 
 @media(max-width:900px){
   .hero-wrap,.about-grid,.offer-box,.safety-grid{grid-template-columns:1fr}
-  .hero-wrap{text-align:center;padding-top:20px}
+  .hero-wrap{text-align:center;padding-top:10px;min-height:0;gap:18px}
+  .hero{padding:26px 0 40px}
   .hero p{margin-left:auto;margin-right:auto}
   .hero-image{order:-1}
-  .hero-image img{max-height:360px}
+  .hero-image img{max-height:280px}
   .hero-note{justify-content:center}
+  .urgency{margin-left:auto;margin-right:auto}
   .benefits-row{grid-template-columns:repeat(2,1fr)}
   .benefit-mini:nth-child(2){border-right:0}
   .benefit-mini:nth-child(1),.benefit-mini:nth-child(2){border-bottom:1px solid rgba(255,255,255,.1)}
@@ -542,18 +547,21 @@ footer p{max-width:900px;margin:auto}
 @media(max-width:560px){
   section{padding:50px 0}
   .container{padding-left:14px !important;padding-right:14px !important}
-  .top{font-size:10px}
-  .hero h1{font-size:38px}
-  .hero h2{font-size:20px}
-  .hero p{font-size:15px}
-  .hero-image img{width:min(100%,300px);max-height:300px}
-  .hero-image:before{width:300px;height:300px}
+  .top{font-size:10px;padding:9px 12px}
+  .hero{padding:14px 0 30px}
+  .kicker{display:none}
+  .hero h1{font-size:34px;letter-spacing:-1px;margin-bottom:10px}
+  .hero h2{font-size:17px;margin-bottom:16px}
+  .hero p{display:none}
+  .hero-image img{width:min(100%,200px);max-height:200px}
+  .hero-image:before{width:220px;height:220px}
   .cta{width:100%;font-size:14px}
+  .urgency{margin:16px 0 0;max-width:100%;padding:12px 10px;gap:8px}
+  .hero-note{display:none}
   .benefits-row{grid-template-columns:1fr 1fr}
   .cards{grid-template-columns:1fr}
   .data{grid-template-columns:1fr}
   .offer h2{font-size:28px}
-  .urgency{max-width:100%;padding:14px 10px;gap:8px}
   .urgency-label{font-size:10px}
   .time-box{min-width:38px;font-size:16px}
 
@@ -598,7 +606,7 @@ footer p{max-width:900px;margin:auto}
       </p>
 
       <!-- BOTÃO HERO -->
-      <a class="cta" href="https://meli.la/21jdUj8" target="_blank" rel="noopener noreferrer">
+      <a class="cta" href="https://meli.la/21jdUj8">
         CONHECER O CLARID SKIN <span class="arrow">→</span>
       </a>
 
@@ -626,7 +634,8 @@ footer p{max-width:900px;margin:auto}
       <img
         src="https://clarid.com.br/wp-content/uploads/2025/10/banneerfire.png"
         alt="Clarid Skin Clareador Dérmico Corporal"
-        fetchpriority="high">
+        fetchpriority="high"
+        decoding="async">
     </div>
 
   </div>
@@ -725,7 +734,8 @@ footer p{max-width:900px;margin:auto}
       <img
         src="https://clarid.com.br/wp-content/uploads/2025/10/banneerfire.png"
         alt="Clarid Skin Illuminator"
-        loading="lazy">
+        loading="lazy"
+        decoding="async">
     </div>
 
     <div>
@@ -876,7 +886,7 @@ footer p{max-width:900px;margin:auto}
         </ul>
 
         <!-- BOTÃO SEÇÃO OFERTA -->
-        <a class="cta" href="https://meli.la/21jdUj8" target="_blank" rel="noopener noreferrer">
+        <a class="cta" href="https://meli.la/21jdUj8">
           VER PRODUTO NO MERCADO LIVRE <span class="arrow">→</span>
         </a>
       </div>
@@ -885,7 +895,8 @@ footer p{max-width:900px;margin:auto}
         <img
           src="https://clarid.com.br/wp-content/uploads/2025/10/banneerfire.png"
           alt="Clarid Skin"
-          loading="lazy">
+          loading="lazy"
+          decoding="async">
       </div>
 
     </div>
@@ -973,7 +984,7 @@ footer p{max-width:900px;margin:auto}
     </p>
 
     <!-- BOTÃO CTA FINAL -->
-    <a class="cta" href="https://meli.la/21jdUj8" target="_blank" rel="noopener noreferrer">
+    <a class="cta" href="https://meli.la/21jdUj8">
       CONHECER NO MERCADO LIVRE <span class="arrow">→</span>
     </a>
   </div>
@@ -994,69 +1005,99 @@ footer p{max-width:900px;margin:auto}
 
 <!-- CTA MOBILE FIXO -->
 <div class="mobile-cta">
-  <a class="cta" href="https://meli.la/21jdUj8" target="_blank" rel="noopener noreferrer">
+  <a class="cta" href="https://meli.la/21jdUj8">
     <span>🛒 COMPRAR NO MERCADO LIVRE</span>
     <span class="subtext">Compra 100% Protegida 🔒</span>
   </a>
 </div>
 
+<!-- RASTREAMENTO + SAÍDA NA MESMA ABA -->
 <script>
 (function(){
-  const DURATION = 15 * 60;
-  const STORAGE_KEY = 'clarid_timer_remaining';
+  var animado = false;
 
-  let savedTime = sessionStorage.getItem(STORAGE_KEY);
-  let remaining = savedTime !== null ? parseInt(savedTime, 10) : DURATION;
-
-  if (isNaN(remaining) || remaining <= 0) {
-    remaining = DURATION;
-  }
-
-  function updateTimer(){
-    const h = String(Math.floor(remaining / 3600)).padStart(2,'0');
-    const m = String(Math.floor((remaining % 3600) / 60)).padStart(2,'0');
-    const sec = String(remaining % 60).padStart(2,'0');
-
-    document.querySelectorAll('.timer').forEach(timer => {
-      const hours = timer.querySelector('.hours');
-      const minutes = timer.querySelector('.minutes');
-      const seconds = timer.querySelector('.seconds');
-      if(hours) hours.textContent = h;
-      if(minutes) minutes.textContent = m;
-      if(seconds) seconds.textContent = sec;
-    });
-
-    sessionStorage.setItem(STORAGE_KEY, remaining);
-
-    if(remaining <= 0){
-      remaining = DURATION;
-    }else{
-      remaining--;
+  // Dispara os eventos e só depois leva a pessoa ao Mercado Livre (mesma aba).
+  // Se o Google não responder, sai após 400 ms para nunca travar o clique.
+  function sair(url){
+    var saiu = false;
+    function ir(){
+      if (saiu) return;
+      saiu = true;
+      window.location.href = url;
     }
-  }
 
-  updateTimer();
-  setInterval(updateTimer, 1000);
-
-  // Rastreamento de cliques de saída para o Mercado Livre
-  document.querySelectorAll('a[href*="meli.la"], a.cta').forEach(function(el) {
-    el.addEventListener('click', function() {
+    try {
       if (typeof fbq === 'function') {
         fbq('track', 'InitiateCheckout', {
           content_name: 'Clarid Skin Clareador Dérmico Corporal',
           currency: 'BRL'
         });
       }
+    } catch (e) {}
 
+    try {
       if (typeof gtag === 'function') {
         gtag('event', 'conversion', {
           'send_to': 'AW-300121029/otdECKDXl5EdEMX3jY8B',
           'value': 1.0,
-          'currency': 'BRL'
+          'currency': 'BRL',
+          'event_callback': ir
         });
       }
+    } catch (e) {}
+
+    setTimeout(ir, 400);
+  }
+
+  document.querySelectorAll('a[href*="meli.la"], a.cta').forEach(function(el){
+    el.addEventListener('click', function(ev){
+      // Ctrl/Cmd+clique e clique do meio seguem o comportamento normal do navegador
+      if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button === 1) return;
+      ev.preventDefault();
+      sair(el.href);
     });
   });
+})();
+</script>
+
+<!-- CONTADOR -->
+<script>
+(function(){
+  var DURATION = 15 * 60;
+  var STORAGE_KEY = 'clarid_timer_remaining';
+  var remaining = DURATION;
+
+  // Alguns navegadores internos bloqueiam o armazenamento: nesse caso segue sem ele
+  try {
+    var saved = sessionStorage.getItem(STORAGE_KEY);
+    if (saved !== null) remaining = parseInt(saved, 10);
+  } catch (e) {}
+
+  if (isNaN(remaining) || remaining <= 0) remaining = DURATION;
+
+  function pad(n){ return String(n).padStart(2, '0'); }
+
+  function updateTimer(){
+    var h = pad(Math.floor(remaining / 3600));
+    var m = pad(Math.floor((remaining % 3600) / 60));
+    var s = pad(remaining % 60);
+
+    document.querySelectorAll('.timer').forEach(function(timer){
+      var hours = timer.querySelector('.hours');
+      var minutes = timer.querySelector('.minutes');
+      var seconds = timer.querySelector('.seconds');
+      if (hours) hours.textContent = h;
+      if (minutes) minutes.textContent = m;
+      if (seconds) seconds.textContent = s;
+    });
+
+    try { sessionStorage.setItem(STORAGE_KEY, remaining); } catch (e) {}
+
+    if (remaining <= 0) { remaining = DURATION; } else { remaining--; }
+  }
+
+  updateTimer();
+  setInterval(updateTimer, 1000);
 })();
 </script>
 
